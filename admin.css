@@ -1,0 +1,93 @@
+.admin-page { min-height: 100vh; display: flex; flex-direction: column; }
+.admin-page[hidden], [hidden] { display: none !important; }
+.admin-page .announcement { justify-content: center; }
+.admin-page .announcement a { color: #f5f3eb; font-size: 9px; }
+.admin-header { height: 72px; }
+.admin-header .text-link { font-size: 10px; }
+.admin-main { width: min(1020px, 88%); min-height: 65vh; margin: 0 auto; padding: 58px 0 90px; }
+.admin-intro { margin-bottom: 32px; }
+.admin-intro .eyebrow { margin-bottom: 13px; }
+.admin-intro h1 { margin: 0; font: 500 clamp(42px, 6vw, 59px)/1.1 var(--serif); letter-spacing: -.04em; }
+.admin-intro h1 em { color: #788674; }
+.admin-intro > p:last-child { max-width: 470px; margin: 12px 0 0; color: #777e76; font-size: 12px; line-height: 1.7; }
+.admin-card { padding: 27px 30px; border: 1px solid var(--line); background: #fbfbf8; }
+.auth-card { max-width: 620px; }
+.auth-card > .eyebrow { margin-bottom: 9px; }
+.auth-card h2, .dashboard-heading h2, .product-manager-heading h2 { margin: 0; font: 500 28px/1.2 var(--serif); letter-spacing: -.025em; }
+.auth-card h2 em, .dashboard-heading h2 em, .product-manager-heading h2 em { color: #788674; }
+.card-description { margin: 10px 0 23px; color: #777e76; font-size: 11px; line-height: 1.65; }
+.stacked-form { display: grid; gap: 10px; margin-top: 23px; }
+.stacked-form label, .password-form label, .product-form label { color: #555f55; font-size: 10px; }
+.stacked-form input, .stacked-form select, .password-form input, .product-form input, .product-form select { width: 100%; min-height: 43px; padding: 0 12px; border: 1px solid #dfe2db; border-radius: 0; background: #fff; color: var(--ink); outline-color: #83917e; font-size: 11px; }
+.form-hint { margin: 0; color: #888f85; font-size: 9px; }
+.form-message { min-height: 14px; margin: 0; color: #536a51; font-size: 10px; line-height: 1.5; }
+.form-message.error { color: #a34a39; }
+.stacked-form .button { justify-self: start; margin-top: 4px; }
+.dashboard-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; padding: 25px 0 20px; border-bottom: 1px solid var(--line); }
+.dashboard-heading .eyebrow { margin-bottom: 9px; }
+.account-identity { margin: 8px 0 0; color: #777e76; font-size: 10px; }
+.signout-button { white-space: nowrap; }
+.password-card { margin-top: 17px; padding: 17px 20px; }
+.password-card summary { cursor: pointer; color: var(--ink); font: 500 16px var(--serif); }
+.password-form { display: grid; gap: 9px; max-width: 380px; padding-top: 18px; }
+.password-form .button { justify-self: start; }
+.role-notice { display: flex; gap: 12px; align-items: flex-start; margin-top: 24px; padding: 18px; background: #e9eee5; color: #586858; }
+.role-notice > span { color: var(--orange); font-size: 17px; }
+.role-notice p { margin: 1px 0 0; font-size: 11px; line-height: 1.7; }
+.dev-credentials { margin: 21px 0; }
+.dev-credentials > div { min-width: 0; }
+.dev-credentials strong { color: var(--ink); }
+.temporary-password { display: block; width: fit-content; max-width: 100%; overflow-wrap: anywhere; margin: 11px 0; padding: 10px 12px; border: 1px solid #d4ddcf; background: #f7f7f4; color: var(--ink); font: 500 13px var(--sans); user-select: all; }
+.copy-dev-password { margin-top: 2px; }
+.dev-credentials .form-message { margin-top: 7px; }
+.product-manager-heading { display: flex; justify-content: space-between; align-items: end; gap: 18px; margin: 38px 0 18px; }
+.product-manager-heading .eyebrow { margin-bottom: 9px; }
+.product-manager-heading h2 { font-size: 32px; }
+.new-product-button { flex: 0 0 auto; min-height: 42px; }
+.manager-message { margin-bottom: 7px; }
+.product-manager { display: grid; gap: 9px; }
+.managed-product { display: grid; grid-template-columns: 63px minmax(0,1fr) auto auto; gap: 16px; align-items: center; padding: 11px; border: 1px solid var(--line); background: #fbfbf8; }
+.managed-product img { width: 63px; height: 68px; object-fit: cover; background: #ecebe5; }
+.managed-product-info { min-width: 0; }
+.managed-product-info h3 { overflow: hidden; margin: 0; font: 500 17px var(--serif); text-overflow: ellipsis; white-space: nowrap; }
+.managed-product-info p { margin: 5px 0 0; color: #838b80; font-size: 9px; }
+.managed-product-price { font-size: 11px; white-space: nowrap; }
+.managed-product .text-link { margin: 0 7px; font-size: 9px; }
+.editor-card { max-width: 680px; margin-top: 24px; scroll-margin-top: 25px; }
+.editor-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+.editor-heading .eyebrow { margin-bottom: 7px; }
+.editor-heading h3 { margin: 0; font: 500 24px var(--serif); }
+.editor-heading .icon-button { width: 33px; height: 33px; }
+.product-form { display: grid; grid-template-columns: 145px minmax(0,1fr); gap: 10px 14px; align-items: center; }
+.product-form label { align-self: center; }
+.product-form label span { display: block; margin-top: 4px; color: #898f86; font-size: 8px; line-height: 1.4; }
+.product-form input, .product-form select { min-height: 39px; }
+.product-form input[type="file"] { height: auto; padding: 8px; }
+.product-image-control { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.product-image-control input { min-width: 0; }
+.product-image-control img { width: 58px; height: 58px; flex: 0 0 auto; object-fit: cover; background: #ecebe5; }
+.product-form .form-message, .editor-actions { grid-column: 2; }
+.editor-actions { display: flex; align-items: center; gap: 18px; }
+.editor-actions .button { min-height: 41px; }
+.admin-footer { margin-top: auto; }
+
+@media (max-width: 620px) {
+  .admin-header { height: 63px; }
+  .admin-main { width: 90%; padding: 43px 0 62px; }
+  .admin-intro { margin-bottom: 23px; }
+  .admin-intro h1 { font-size: 45px; }
+  .admin-card { padding: 21px 18px; }
+  .auth-card h2, .dashboard-heading h2 { font-size: 24px; }
+  .dashboard-heading { align-items: flex-start; }
+  .product-manager-heading { align-items: flex-start; flex-direction: column; }
+  .managed-product { grid-template-columns: 53px minmax(0,1fr) auto; gap: 10px; padding: 8px; }
+  .managed-product img { width: 53px; height: 60px; }
+  .managed-product-info h3 { font-size: 14px; }
+  .managed-product-price { grid-column: 2; grid-row: 2; margin-top: -13px; }
+  .managed-product .text-link { grid-column: 3; grid-row: 1 / span 2; }
+  .product-form { grid-template-columns: 1fr; gap: 7px; }
+  .product-form label { margin-top: 5px; }
+  .product-image-control { grid-column: 1; }
+  .product-form .form-message, .editor-actions { grid-column: 1; }
+  .site-footer.admin-footer { gap: 12px; }
+}

@@ -1,9 +1,241 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>BongoNari</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f7f4" />
+    <meta
+      name="description"
+      content="Thoughtful everyday goods for slower, better living. Discover the latest from Bongonari."
+    />
+    <title>Bongonari — Good things, thoughtfully made</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
   </head>
   <body>
-    <h1>Welcome to BongoNari</h1>
+    <div class="announcement">
+      <span>Made for everyday moments</span>
+      <span class="announcement-divider">✳</span>
+      <span>Complimentary shipping on orders of ₹1,000 or more</span>
+    </div>
+
+    <header class="site-header">
+      <a class="wordmark" href="#" aria-label="Bongonari home">
+        <img class="wordmark-icon" src="/assets/bongonari-logo.png" alt="" />
+        <span class="wordmark-name">BongoNari</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#shop" class="nav-link active" data-category-link="All">Shop all</a>
+        <a href="#story" class="nav-link">Our story</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button search-toggle" aria-label="Search products" title="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.3 4.3"></path></svg>
+        </button>
+        <a class="account-link" href="/admin.html" aria-label="Store account" title="Store account">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg>
+          <span>Account</span>
+        </a>
+        <button class="icon-button cart-trigger" aria-label="Open shopping bag">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l1 12H4L5 8Z"></path><path d="M9 9V6a3 3 0 0 1 6 0v3"></path></svg>
+          <span class="cart-count" aria-live="polite">0</span>
+        </button>
+        <button class="menu-toggle icon-button" aria-label="Open navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> A little more intentional</p>
+          <h1>Good things,<br /><em>thoughtfully</em> made.</h1>
+          <p class="hero-description">
+            Everyday essentials with a softer point of view. Made to be used, loved, and kept around.
+          </p>
+          <a class="button button-dark" href="#shop">Shop the collection <span aria-hidden="true">↗</span></a>
+          <div class="hero-footnote"><span class="tiny-star">✳</span> Objects for a life well lived</div>
+        </div>
+        <div class="hero-art">
+          <img
+            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1500&q=85"
+            alt="Sunlit, thoughtfully styled living room with warm neutral furnishings"
+          />
+          <div class="hero-image-tag"><span>THE SLOW LIVING EDIT</span><span>01 / 04</span></div>
+          <div class="hero-sticker"><span>LIVE<br />A LITTLE<br /><i>lighter</i></span><span class="sticker-flower">✳</span></div>
+        </div>
+      </section>
+
+      <section class="values-strip" aria-label="Our values">
+        <span>Made with intention</span><span class="strip-star">✳</span>
+        <span>Better by design</span><span class="strip-star">✳</span>
+        <span>Keep good things close</span><span class="strip-star">✳</span>
+        <span>Made with intention</span>
+      </section>
+
+      <section class="shop-section" id="shop">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> The good stuff</p>
+            <h2>Find your <em>everyday.</em></h2>
+          </div>
+          <p class="section-note">Considered pieces for wherever the day takes you.</p>
+        </div>
+        <div class="shop-toolbar">
+          <div class="category-tabs" role="group" aria-label="Filter products by category"></div>
+          <label class="search-control">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.3 4.3"></path></svg>
+            <input id="product-search" type="search" placeholder="Find something..." aria-label="Search products" />
+          </label>
+          <label class="sort-control">
+            <span>Sort by</span>
+            <select id="sort-select" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="price-low">Price: low to high</option>
+              <option value="price-high">Price: high to low</option>
+              <option value="name">Name: A to Z</option>
+            </select>
+          </label>
+        </div>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="promise-section" aria-labelledby="promise-title">
+        <div class="promise-heading">
+          <p class="eyebrow"><span class="eyebrow-line"></span> What we stand for</p>
+          <h2 id="promise-title">Our <em>promise.</em></h2>
+        </div>
+        <ol class="promise-list">
+          <li class="promise-card">
+            <span class="promise-number">01</span>
+            <h3>Authentic Artistry</h3>
+            <p>Designed in collaboration with skilled local artisans (Karigars) whose craft has been passed down through generations.</p>
+          </li>
+          <li class="promise-card">
+            <span class="promise-number">02</span>
+            <h3>Versatile Luxury</h3>
+            <p>Premium craftsmanship tailored to transition seamlessly from morning meetings to evening celebrations.</p>
+          </li>
+          <li class="promise-card">
+            <span class="promise-number">03</span>
+            <h3>A Symbol of Identity</h3>
+            <p>Crafted not just to complement your outfit, but to celebrate your heritage, your strength, and your story.</p>
+          </li>
+        </ol>
+        <p class="promise-closing">When you wear Bongonari, you don't just put on a piece of jewelry. You wear a legacy of grace, power, and timeless Bengali beauty—crafted for the woman you are today.</p>
+      </section>
+
+      <section class="newsletter">
+        <span class="newsletter-flower" aria-hidden="true">✳</span>
+        <p class="eyebrow">A good note, now and then</p>
+        <h2>Slow mail for <em>slow days.</em></h2>
+        <p>New finds, small rituals, and 10% off your first order.</p>
+        <form class="newsletter-form">
+          <label class="visually-hidden" for="newsletter-email">Your email address</label>
+          <input id="newsletter-email" type="email" placeholder="Your email address" required />
+          <button type="submit" aria-label="Subscribe to newsletter">Join us <span aria-hidden="true">↗</span></button>
+        </form>
+        <p class="newsletter-message" aria-live="polite"></p>
+      </section>
+
+      <section class="story-banner" id="story">
+        <div class="story-image woman-portrait">
+          <svg class="woman-illustration" viewBox="0 0 520 520" role="img" aria-labelledby="woman-title woman-description">
+            <title id="woman-title">Bengali woman wearing traditional jewelry</title>
+            <desc id="woman-description">Original portrait of a Bengali woman in a red-bordered white saree, with a gold nose ring, traditional bangles, and alpona-inspired floral details.</desc>
+            <circle cx="260" cy="260" r="224" fill="#edf2e2" />
+            <circle cx="260" cy="260" r="205" fill="none" stroke="#a47a43" stroke-width="2" stroke-dasharray="2 8" />
+            <path d="M99 305c13-18 28-27 46-28-5 20-16 35-34 45M421 305c-13-18-28-27-46-28 5 20 16 35 34 45" fill="none" stroke="#758064" stroke-width="2" />
+            <path d="M114 314c8 8 13 18 14 29-11-3-20-10-26-20M406 314c-8 8-13 18-14 29 11-3 20-10 26-20" fill="none" stroke="#b98b48" stroke-width="2" />
+            <path d="M96 363c13-14 28-20 45-18-9 11-20 18-34 21 14 3 25 10 34 21-17 2-32-4-45-18-13 14-28 20-45 18 9-11 20-18 34-21-14-3-25-10-34-21 17-2 32 4 45 18ZM424 363c13-14 28-20 45-18-9 11-20 18-34 21 14 3 25 10 34 21-17 2-32-4-45-18-13 14-28 20-45 18 9-11 20-18 34-21-14-3-25-10-34-21 17-2 32 4 45 18Z" fill="none" stroke="#b98b48" stroke-width="2" stroke-linejoin="round" />
+            <circle cx="96" cy="363" r="3" fill="#b84e42" /><circle cx="424" cy="363" r="3" fill="#b84e42" />
+            <path d="M84 338c28-52 63-82 105-91-36-38-52-81-44-128 8-48 46-84 101-89 68-7 135 42 144 113 5 43-11 81-44 112 42 13 78 44 105 91v135H84Z" fill="#642f36" />
+            <path d="M166 232c-17-30-22-69-12-105 13-48 52-76 99-76 57 0 100 38 105 96 2 25-5 54-20 79-18 31-48 54-84 54-38 0-69-18-88-48Z" fill="#edc49e" />
+            <path d="M151 155c5-65 50-111 117-111 71 0 118 49 115 124-25-6-42-26-53-50-30 33-85 51-162 53-6 1-12-5-17-16Z" fill="#40232c" />
+            <path d="M155 117c27-47 76-65 127-52 37 9 64 34 81 70-33-33-66-47-105-47-38 0-69 11-103 29Z" fill="#55303a" />
+            <path d="M193 167c11-8 23-8 34-1M292 164c11-8 23-7 33 1" fill="none" stroke="#40232c" stroke-width="5" stroke-linecap="round" />
+            <path d="M199 184c10 9 20 9 30 0M298 183c10 9 20 9 30 0" fill="none" stroke="#40232c" stroke-width="3" stroke-linecap="round" />
+            <circle cx="217" cy="183" r="3.5" fill="#40232c" /><circle cx="315" cy="183" r="3.5" fill="#40232c" />
+            <path d="M266 183c-2 18-8 33-12 43 7 5 16 6 24 2" fill="none" stroke="#b66c51" stroke-width="3" stroke-linecap="round" />
+            <path d="M250 245c11 7 24 7 36-1" fill="none" stroke="#9b4d48" stroke-width="4" stroke-linecap="round" />
+            <circle cx="265" cy="151" r="5" fill="#b85548" />
+            <path d="M266 110c0 17 1 29 2 40" fill="none" stroke="#c89a50" stroke-width="2" />
+            <path d="M259 123c0-5 3-8 7-8s7 3 7 8-3 8-7 8-7-3-7-8Z" fill="#d6ad62" />
+            <circle cx="272" cy="214" r="9" fill="none" stroke="#d6ad62" stroke-width="2.5" />
+            <circle cx="272" cy="214" r="2.5" fill="#b85548" />
+            <path d="M186 208c-8 21-4 44 12 60 12 12 27 17 43 18M329 207c7 19 3 41-11 57-11 13-27 20-43 21" fill="none" stroke="#a46b3f" stroke-width="2" />
+            <path d="M204 224v26c0 20 16 37 36 37s36-17 36-37v-24M282 225v25c0 20 16 37 36 37s36-17 36-37v-26" fill="none" stroke="#d6ad62" stroke-width="3" />
+            <circle cx="240" cy="291" r="6" fill="#d6ad62" /><circle cx="318" cy="291" r="6" fill="#d6ad62" />
+            <path d="M196 276c-10 7-14 19-11 30M354 276c10 7 14 19 11 30" fill="none" stroke="#f7f3e9" stroke-width="5" />
+            <path d="M190 280c-8 7-11 17-8 26M360 280c8 7 11 17 8 26" fill="none" stroke="#b84e42" stroke-width="5" />
+            <path d="M205 297c-50 12-85 45-111 96v80h332v-80c-26-51-61-84-111-96-16 24-34 36-55 36s-39-12-55-36Z" fill="#a24e42" />
+            <path d="M205 298c17 27 35 40 55 40s38-13 55-40l28 17c-19 40-47 61-83 61s-64-21-83-61Z" fill="#d5ab67" />
+            <path d="M205 301c-34 21-59 55-79 103-11 26-19 49-25 70h100c15-51 37-96 78-136-28-5-51-17-74-37Z" fill="#f7f3e9" />
+            <path d="M205 301c-34 21-59 55-79 103-11 26-19 49-25 70" fill="none" stroke="#b84e42" stroke-width="9" />
+            <path d="M113 467h88M124 449h81" fill="none" stroke="#b84e42" stroke-width="5" />
+            <path d="M260 350v123M112 407c19-11 36-19 51-25M408 407c-45-26-78-37-106-37" fill="none" stroke="#e4c88e" stroke-width="3" opacity=".8" />
+            <path d="M160 142c-12 4-20 12-23 24 13-1 23-7 30-17M370 137c11 5 18 15 20 27-13-2-22-9-28-20" fill="none" stroke="#f7f3e9" stroke-width="6" stroke-linecap="round" />
+            <circle cx="146" cy="164" r="5" fill="#d6ad62" /><circle cx="153" cy="174" r="5" fill="#f7f3e9" /><circle cx="161" cy="181" r="5" fill="#d6ad62" />
+            <path d="M122 223c-17-12-27-29-31-48 18 8 31 20 39 36M397 222c17-12 27-29 31-48-18 8-31 20-39 36M150 280c-20-4-35-14-46-30 20 1 36 7 50 20M369 280c20-4 35-14 46-30-20 1-36 7-50 20" fill="none" stroke="#758064" stroke-width="3" stroke-linecap="round" />
+            <circle cx="91" cy="174" r="5" fill="#c67959" /><circle cx="430" cy="174" r="5" fill="#c67959" />
+            <path d="M128 118c11-17 22-24 37-26-5 16-14 27-28 36M392 118c-11-17-22-24-37-26 5 16 14 27 28 36" fill="none" stroke="#758064" stroke-width="3" stroke-linecap="round" />
+            <circle cx="260" cy="83" r="5" fill="#b98b48" /><path d="M260 64v38M241 83h38" stroke="#b98b48" stroke-width="2" />
+            <path d="M260 458c-8-8-8-17 0-26 8 9 8 18 0 26Zm-12 1c-12 0-18-7-17-18 11 1 17 7 17 18Zm24 0c12 0 18-7 17-18-11 1-17 7-17 18Z" fill="none" stroke="#b84e42" stroke-width="2" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="story-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Our story</p>
+          <h2>Bengal’s women.<br /><em>Heritage in every detail.</em></h2>
+          <p>Bongonari was born from a deep reverence for the timeless grace, strength, and artistry of Bengal’s women. The name itself—Bongo (Bengal) and Nari (Woman)—is a tribute to the modern woman who carries heritage in her heart while boldly shaping her own path.</p>
+          <p>Our journey began in traditional workshops, where generations of master artisans (karigars) transformed fine metals into delicate art. Every swoop of filigree, every intricate motif, and every carefully set stone reflects a legacy of culture, celebration, and emotion.</p>
+          <p>At Bongonari, we believe jewelry is more than an ornament—it is a story of pride, identity, and personal empowerment. Whether it’s an heirloom-inspired statement piece for a grand occasion or a minimalist design for everyday elegance, Bongonari is crafted to honor the extraordinary woman in you.</p>
+          <a class="text-link" href="#shop">Explore the collection <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark footer-wordmark" href="#"><img class="wordmark-icon" src="/assets/bongonari-logo.png" alt="" /><span class="wordmark-name">BongoNari</span></a>
+      <p>Good things for the every day.</p>
+      <div class="footer-links">
+        <span class="footer-contact-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 9v11h14V9M9 20v-6h6v6"></path></svg>
+          Howrah | West Bengal
+        </span>
+        <a class="footer-contact-item" href="mailto:bongonari.offical@gmail.com">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"></rect><path d="m4 7 8 6 8-6"></path></svg>
+          bongonari.offical@gmail.com
+        </a>
+        <a class="footer-contact-item" href="tel:+918584924776">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h3l2 5-2.5 1.5a13 13 0 0 0 5 5L16 12l5 2v3c0 1.1-.9 2-2 2C10.7 19 5 13.3 5 6c0-1.7.8-3 2-3Z"></path></svg>
+          8584924776
+        </a>
+      </div>
+      <span class="copyright">© 2026 Bongonari</span>
+    </footer>
+
+    <div class="overlay" hidden></div>
+    <aside class="cart-drawer" aria-label="Shopping bag" aria-hidden="true">
+      <div class="drawer-header">
+        <div><p class="eyebrow">YOUR GOOD FINDS</p><h2>Your bag <span class="drawer-count">(0)</span></h2></div>
+        <button class="icon-button close-cart" aria-label="Close shopping bag"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"></path></svg></button>
+      </div>
+      <div class="cart-items"></div>
+      <div class="cart-empty"><span>✳</span><p>Your bag is having a quiet moment.</p><button class="text-link continue-shopping">Find something lovely <span aria-hidden="true">↗</span></button></div>
+      <div class="cart-footer">
+        <div class="shipping-progress"><span class="shipping-message">You're a little way from complimentary shipping.</span><div class="progress-track"><span></span></div></div>
+        <div class="subtotal-row"><span>Subtotal</span><strong class="cart-subtotal">₹0.00</strong></div>
+        <p class="tax-note">Shipping and taxes calculated at checkout.</p>
+        <button class="button button-dark checkout-button">Continue to checkout <span aria-hidden="true">↗</span></button>
+      </div>
+    </aside>
+    <div class="toast" role="status" aria-live="polite"></div>
   </body>
 </html>

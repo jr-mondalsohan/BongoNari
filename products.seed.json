@@ -1,0 +1,82 @@
+[
+  {
+    "id": "linen-throw",
+    "name": "Sunday Linen Throw",
+    "category": "Home",
+    "detail": "Washed European linen",
+    "price": 98,
+    "badge": "BEST LOVED",
+    "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80",
+    "position": "center 72%"
+  },
+  {
+    "id": "everyday-tote",
+    "name": "Everyday Market Tote",
+    "category": "Wear",
+    "detail": "Recycled cotton canvas",
+    "price": 42,
+    "badge": "MADE TO GO",
+    "image": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=80",
+    "position": "center"
+  },
+  {
+    "id": "stoneware-cup",
+    "name": "Slow Morning Cup",
+    "category": "Home",
+    "detail": "Hand-thrown stoneware",
+    "price": 28,
+    "badge": "SMALL BATCH",
+    "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=800&q=80",
+    "position": "center"
+  },
+  {
+    "id": "everyday-cap",
+    "name": "The Sunday Cap",
+    "category": "Wear",
+    "detail": "Organic cotton twill",
+    "price": 36,
+    "badge": "",
+    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
+    "position": "center"
+  },
+  {
+    "id": "clay-vase",
+    "name": "Little Earth Vase",
+    "category": "Objects",
+    "detail": "Hand-finished clay",
+    "price": 54,
+    "badge": "MADE BY HAND",
+    "image": "https://images.unsplash.com/photo-1578500494198-246f612d3b3d?auto=format&fit=crop&w=800&q=80",
+    "position": "center"
+  },
+  {
+    "id": "market-bag",
+    "name": "Weekend Market Bag",
+    "category": "Wear",
+    "detail": "Responsibly woven raffia",
+    "price": 64,
+    "badge": "",
+    "image": "https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=800&q=80",
+    "position": "center"
+  },
+  {
+    "id": "incense-set",
+    "name": "A Quiet Moment Set",
+    "category": "Objects",
+    "detail": "Botanical incense · 20 sticks",
+    "price": 32,
+    "badge": "A LITTLE RITUAL",
+    "image": "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=800&q=80",
+    "position": "center"
+  },
+  {
+    "id": "glass-carafe",
+    "name": "Daily Water Carafe",
+    "category": "Home",
+    "detail": "Recycled glass · 900 ml",
+    "price": 48,
+    "badge": "",
+    "image": "https://images.unsplash.com/photo-1572119865084-43c285814d63?auto=format&fit=crop&w=800&q=80",
+    "position": "center"
+  }
+]
